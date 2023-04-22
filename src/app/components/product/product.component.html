@@ -1,0 +1,31 @@
+<div class="container">
+  <!-- Display the "Categories" label and "Favorite food" dropdown -->
+  <div class="form-wrapper">
+    <mat-label>Categories</mat-label>
+    <mat-form-field appearance="fill">
+      <select matNativeControl (change)="filterCategory($event)" required>
+        <option value="all" selected>All</option>
+        <option value="{{option}}" *ngFor="let option of categories">
+          {{option}}
+        </option>
+      </select>
+    </mat-form-field>
+  </div>
+
+  <!-- Display the "Products" card below the dropdown -->
+  <div class="card-wrapper">
+    <mat-card class="product-card"  *ngFor="let item of products">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{item?.title}}</mat-card-title>
+          <mat-card-subtitle>{{item?.description}}"</mat-card-subtitle>
+          <img mat-card-md-image src="{{item?.image}}" />
+        </mat-card-title-group>
+      </mat-card-header>
+      <div class="button-wrapper">
+        <button mat-raised-button color="primary">Add to Cart</button>
+      </div>
+      <mat-card-content> </mat-card-content>
+    </mat-card>
+  </div>
+</div>

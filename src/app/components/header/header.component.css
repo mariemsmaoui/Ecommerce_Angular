@@ -1,0 +1,32 @@
+.mat-toolbar {
+    background-color: #ffffff;
+    color: #d49400;
+  }
+  .custom-button {
+    padding-right: 1em;
+    color: #1149c1;
+    font-size: 17px;
+  }
+  
+  .search-bar {
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 70px;
+    width: 500px;
+  }
+  
+  .search-bar input {
+    border-radius: 70px;
+  }
+  
+  .mat-icon {
+    color: #d49400;
+  }
+  .fill-remaining-space {
+    flex: 1 1 auto;
+  }
+  .product-card {
+    max-width: 300px;
+    margin-bottom: 8px;
+  }
+  

@@ -17,11 +17,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
+import { ProductComponent } from './components/product/product.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CartComponent } from './components/cart/cart.component';
+import {MatSelectModule} from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    ProductComponent,
+    HeaderComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +46,10 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatInputModule,
     MatButtonModule ,
     MatIconModule ,
-    MatBadgeModule
+    MatBadgeModule,
+    MatSelectModule,
+    HttpClientModule
+    
 
   ],
   providers: [],

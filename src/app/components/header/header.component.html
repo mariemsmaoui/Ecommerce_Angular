@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <mat-toolbar class="transparent-on-scroll">
+      <!--img src="" alt="Website Logo" style="height: 40px; margin-right: 10px" /-->
+      <!-- or use text instead of logo -->
+      <span style="font-size: 18px; font-weight: bold; margin-right: 10px;">EStore</span>
+
+      <a href="/" style="padding-right: 1em; color: #1149c1; font-size: 17px"
+        >Home</a
+      >
+
+      <a
+        routerLink="/product"
+        style="padding-right: 1em; color: #1149c1; font-size: 17px"
+        >About</a
+      >
+      
+      <a
+        mat-button
+        [matMenuTriggerFor]="menu"
+        style="padding-right: 1em; color: #1149c1; font-size: 17px"
+        >Product</a
+      >
+      <mat-menu #menu="matMenu">
+        <a mat-menu-item href="/">Item 1</a>
+        <a mat-menu-item href="/">Item 2</a>
+      </mat-menu>
+      <mat-form-field class="search-bar">
+        <input matInput type="text" placeholder="Search" />
+        <button mat-button matSuffix>
+          <mat-icon>search</mat-icon>
+        </button>
+      </mat-form-field>
+      <button matBadge="0" matBadgeColor="warn" mat-icon-button routerLink=""  >
+        <mat-icon class="shopping-cart-icon">shopping_cart</mat-icon>
+      </button>
+
+      <span class="fill-remaining-space"></span>
+
+      <a
+        href="/login"
+        style="padding-left: 2em; color: #1149c1; font-size: 17px"
+        >Login</a
+      >
+    </mat-toolbar>
+
+    <ng-image-slider
+      [images]="slides"
+      #nav
+      [imageSize]="{ width: '1200px', height: '200px', space: 0 }"
+    ></ng-image-slider>
+ 
+      
+
+    <div class="content mt-80 mx-16">
+      <router-outlet></router-outlet>
+
+    </div>
+    <!--script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"
+></script>
+
+ ✅ load Slick ✅ -->
+    <!--script
+src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+crossorigin="anonymous"
+referrerpolicy="no-referrer"
+></script-->
+  </body>
+</html>

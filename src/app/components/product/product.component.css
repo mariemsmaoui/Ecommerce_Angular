@@ -1,0 +1,28 @@
+.product-card {
+  width: 350px; /* Set a fixed width */
+  /* float: left; /* Float the card to the left */
+}
+/* Apply styles to the button wrapper */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Apply styles to the button */
+button.mat-raised-button {
+  width: 150px; /* Set the width of the button */
+}
+
+.card-wrapper {
+  text-align: center;
+  gap: 40px; /* set the gap between the cards */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* optional: center the cards horizontally */
+}
+.product-card:hover {
+  transform: scale(1.10);
+  transition: transform 0.3s ease-in-out;
+}
