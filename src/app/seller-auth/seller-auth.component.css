@@ -1,0 +1,27 @@
+.signup, .login{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    color: blue;
+}
+
+.signup h2, .login h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: blue;
+}
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}

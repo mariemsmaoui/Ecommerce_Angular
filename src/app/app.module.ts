@@ -1,55 +1,69 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './layout/layout.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list'; 
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { SellerAuthComponent } from './seller-auth/seller-auth.component';
+import { SellerHomeComponent } from './seller-home/seller-home.component';
+import { SellerAddProductComponent } from './seller-add-product/seller-add-product.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SellerUpdateProductComponent } from './seller-update-product/seller-update-product.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgImageSliderModule } from 'ng-image-slider';
+import { SearchComponent } from './search/search.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UserAuthComponent } from './user-auth/user-auth.component';
+import { CartPageComponent } from './cart-page/cart-page.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCardModule} from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
-import { ProductComponent } from './components/product/product.component';
-import { HeaderComponent } from './components/header/header.component';
-import { CartComponent } from './components/cart/cart.component';
-import {MatSelectModule} from '@angular/material/select';
-import { HttpClientModule } from '@angular/common/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
-    ProductComponent,
     HeaderComponent,
-    CartComponent
+    HomeComponent,
+    SellerAuthComponent,
+    SellerHomeComponent,
+    SellerAddProductComponent,
+    SellerUpdateProductComponent,
+    SearchComponent,
+    FooterComponent,
+    ProductDetailsComponent,
+    UserAuthComponent,
+    CartPageComponent,
+    CheckoutComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule,
-    BrowserAnimationsModule,
-    MatSidenavModule,
-    MatListModule,
-    SlickCarouselModule,
+    FormsModule,
+    HttpClientModule,
+    FontAwesomeModule,
     NgbModule,
-    NgImageSliderModule ,
+    MatSidenavModule ,
     MatMenuModule,
     MatCardModule,
-    MatInputModule,
-    MatButtonModule ,
-    MatIconModule ,
     MatBadgeModule,
-    MatSelectModule,
-    HttpClientModule
-    
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule
+
+
 
   ],
   providers: [],
