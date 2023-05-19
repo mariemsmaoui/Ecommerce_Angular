@@ -1,41 +1,44 @@
 import { Component, OnInit } from '@angular/core';
 import { SellerService } from '../services/seller.service';
-import {Router} from '@angular/router'
-import { SignUp } from '../data-type';
+import { Router } from '@angular/router';
+import { SignUp } from '../Models';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-seller-auth',
   templateUrl: './seller-auth.component.html',
-  styleUrls: ['./seller-auth.component.css']
+  styleUrls: ['./seller-auth.component.css'],
 })
 export class SellerAuthComponent implements OnInit {
-  
-  constructor(private seller:SellerService, private router:Router) { }
+  constructor(
+    private seller: SellerService,
+    private router: Router,
+    public authService: AuthService
+  ) {}
   showLogin = true;
-  authError:string='';
+  authError: string = '';
   ngOnInit(): void {
-      this.seller.reloadSeller();
+    this.seller.reloadSeller();
   }
 
-  signUp(data:SignUp):void{
+  signUp(data: SignUp): void {
     this.seller.sellerSignUp(data);
   }
 
-  login(data:SignUp):void{
-    this.authError = "";
+  login(data: SignUp): void {
+    this.authError = '';
     this.seller.sellerLogin(data);
-    this.seller.isLoginError.subscribe((isError)=>{
-      if(isError){
-        this.authError="Please enter valid credential";
+    this.seller.isLoginError.subscribe((isError) => {
+      if (isError) {
+        this.authError = 'Please enter valid credential';
       }
-    })
+    });
   }
-  openLogin(){
+  openLogin() {
     this.showLogin = true;
   }
 
-  openSignUp(){
+  openSignUp() {
     this.showLogin = false;
   }
-  
 }

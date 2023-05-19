@@ -1,13 +1,75 @@
+<div class="container">
 <div class="add-product">
-    <h2>Add New Product</h2>
-    <h4 class="message-p">{{addProductMessage}}</h4>
-    <form #addProduct="ngForm" (ngSubmit)="addNewProduct(addProduct.value)" class="common-form">
-        <input class="form-input" ngModel type="text" name="name" placeholder="Product Name">
-        <input class="form-input" ngModel type="text" name="price" placeholder="Product Price">
-        <input class="form-input" ngModel type="text" name="color" placeholder="Product Color">
-        <input class="form-input" ngModel type="text" name="category" placeholder="Product Category">
-        <textarea class="form-input" ngModel type="text" name="description" placeholder="Product Description"></textarea>
-        <input class="form-input" ngModel type="text" name="image" placeholder="Product Image URL">
-        <button class="form-button" >Add Product</button>
-    </form>
+  <h2>Add New Product</h2>
+  <h4 class="message-p">{{ addProductMessage }}</h4>
+  <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+
+  <form
+    #addProduct="ngForm"
+    (ngSubmit)="addNewProduct(addProduct.value)"
+    class="common-form"
+  >
+    <div class="form-outline mb-4">
+      <input
+        class="form-control"
+        ngModel
+        type="text"
+        name="name"
+        placeholder="Product Name"
+      />
+    </div>
+    <div class="form-outline mb-4">
+      <input
+        class="form-control"
+        ngModel
+        type="text"
+        name="price"
+        placeholder="Product Price"
+      />
+    </div>
+    <div class="form-outline mb-4">
+      <input
+        class="form-control"
+        ngModel
+        type="text"
+        name="color"
+        placeholder="Product Color"
+      />
+    </div>
+    <div class="form-outline mb-4">
+      <input
+        class="form-control"
+        ngModel
+        type="text"
+        name="category"
+        placeholder="Product Category"
+      />
+    </div>
+
+    <div class="form-outline mb-4">
+      <textarea
+        class="form-control"
+        ngModel
+        type="text"
+        name="description"
+        placeholder="Product Description"
+      ></textarea>
+    </div>
+    <div class="form-outline mb-4">
+      <input
+        class="form-control"
+        ngModel
+        type="text"
+        name="image"
+        placeholder="Product Image URL"
+      />
+    </div>
+    <div class="form-outline mb-4">
+      <button class="form-button"
+      class="btn btn-primary btn-lg"
+      style="padding-left: 2.5rem; padding-right: 2.5rem"
+>Add Product</button>
+    </div>
+  </form>
+</div>
 </div>

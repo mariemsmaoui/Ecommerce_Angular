@@ -4,8 +4,7 @@
 }
 .details h2{
     text-align: center;
-    color: blue;
-}
+    color:    #306bbf;}
 
 .details img{
     height: 100px;
@@ -29,7 +28,8 @@
 
 .summary h3{
     text-align: center;
-    color: blue;
+    color:    #306bbf; /* Change the background color on hover */
+
 }
 .summary ul{
     list-style-type: none;
@@ -45,3 +45,39 @@
 .max-width{
     width: 100%;
 }
+/* Style the button */
+.form-button {
+    background-color: #f54242; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 5px 5px; /* Add padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add a cursor on hover */
+  }
+  
+  /* Apply hover effect */
+  .form-button:hover {
+    background-color: #306bbf; /* Change the background color on hover */
+  }
+  
+  /* Adjust the button width and alignment */
+  .form-button {
+    width: 120px;
+    margin: 0 auto; /* Center align the button horizontally */
+    display: block; /* Make the button a block element */
+  }
+  #checkout{
+    background-color: #4287f5; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 5px 5px; /* Add padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add a cursor on hover */
+  }
+  
+  #remove{
+    background-color: #f54254; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 5px 5px; /* Add padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add a cursor on hover */
+  }
+  

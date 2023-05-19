@@ -1,4 +1,15 @@
-import { EmailValidator } from "@angular/forms"
+
+export interface Product{
+    id:number,
+    productId:undefined|number
+    name:string,
+    price:number,
+    color:string,
+    category:string,
+    description:string,
+    image:string,
+    quantity:undefined|number,
+}
 
 export interface SignUp{
     name:string,
@@ -9,18 +20,6 @@ export interface SignUp{
 export interface Login{
     email:string,
     password:string
-}
-
-export interface Product{
-    name:string,
-    price:number,
-    color:string,
-    category:string,
-    description:string,
-    image:string,
-    id:number,
-    quantity:undefined|number,
-    productId:undefined|number
 }
 
 export interface Cart{
@@ -52,4 +51,11 @@ export interface Order{
     totalPrice:number,
     userId:number,
     id:number| undefined
+    items: { id: number, name: string, price: number, quantity: number }[];
+
+}
+export interface GoogleLogin{
+    name:string,
+    email:string,
+    password?: string;
 }

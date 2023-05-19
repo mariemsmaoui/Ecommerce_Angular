@@ -11,13 +11,13 @@
                     <h6>{{cart.name}}</h6>
                 </li>
                 <li>
-                    <h6>Price: {{cart.price | currency:'INR'}}</h6>
+                    <h6>Price: {{cart.price | currency:'TND'}}</h6>
                 </li>
                 <li>
                     <h6>Quantity: {{cart.quantity}}</h6>
                 </li>
                 <li>
-                    <button class="form-button" (click)="removeCart(cart.id)">Remove</button>
+                    <button class="form-button" id="remove" (click)="removeCart(cart.id)">Remove</button>
                 </li>
             </ul>
         </div>
@@ -25,10 +25,10 @@
             <h3>Summary</h3>
             <ul>
                 <li>
-                    <span>Amount:</span><span>{{priceSummary.price}}</span>
+                    <span>Price:</span><span>{{priceSummary.price}}</span>
                 </li>
                 <li>
-                    <span>GST</span><span>{{priceSummary.tax | number:'1.0-0'}}</span>
+                    <span>Tax</span><span>{{priceSummary.tax | number:'1.0-0'}}</span>
                 </li>
                 <li>
                     <span>Delivery</span><span>{{priceSummary.delivery}}</span>
@@ -37,9 +37,9 @@
                     <span>Discount</span><span>{{priceSummary.discount | number:'1.0-0'}}</span>
                 </li>
                 <li>
-                    <span><h5>Total: </h5></span><span><h5>{{priceSummary.total | currency:'INR'}}</h5></span>
+                    <span><h5>Total: </h5></span><span><h5>{{priceSummary.total | currency:'TND'}}</h5></span>
                 </li>
-                    <button class="form-button max-width" (click)="checkout()">Checkout</button>
+                    <button class="form-button max-width" id="checkout"(click)="checkout()">Checkout</button>
             </ul>
         </div>
     </div>

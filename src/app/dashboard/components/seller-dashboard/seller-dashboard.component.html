@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Product Sales Statistics :</h5>
+    <div class="chart-wrapper bar-chart">
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        chartType="bar"
+      ></canvas>
+    </div>
+  </div>
+</div>
+

@@ -1,38 +1,39 @@
-<div class="my-orders">
-    <h2>My Order Details</h2>
-    <div class="row row-data">
-        <div class="col-sm-2">
-            <span>Orders</span>
-        </div>
-        <div class="col-sm-2">
-            <span>Order Id</span>
-        </div>
-        <div class="col-sm-2">
-            <span>Total Price</span>
-        </div>
-        <div class="col-sm-2">
-            <span>Status</span>
-        </div>
-        <div class="col-sm-2">
-            <span>Action</span>
-        </div>
-    </div>
-
-    <div class="row order-data" *ngFor="let order of orderData">
-        <div class="col-sm-2">
-            <img src="https://www.clipartmax.com/png/middle/210-2106541_track-my-order-beach-volleyball.png" alt="Delivery">
-        </div>
-        <div class="col-sm-2">
-            <span>#{{order.id}}</span>
-        </div>
-        <div class="col-sm-2">
-            <span>{{order.totalPrice}}</span>
-        </div>
-        <div class="col-sm-2">
-            <span>In Process</span>
-        </div>
-        <div class="col-sm-2">
-            <button class="form-button" (click)="cancelOrder(order.id)">Cancel</button>
-        </div>
-    </div>
-</div>
+<mat-table class="my-orders" [dataSource]="orderData">
+    <!-- Define columns -->
+    <ng-container matColumnDef="image">
+      <mat-header-cell *matHeaderCellDef>Customers Orders</mat-header-cell>
+      <mat-cell *matCellDef="let order">
+        {{order.name}}      </mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef>Order Id</mat-header-cell>
+      <mat-cell *matCellDef="let order">#{{order.id}}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="totalPrice">
+      <mat-header-cell *matHeaderCellDef>Total Price</mat-header-cell>
+      <mat-cell *matCellDef="let order">{{order.totalPrice}}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef>Email</mat-header-cell>
+      <mat-cell *matCellDef="let order">{{order.email}}</mat-cell>
+    </ng-container>
+  
+    <ng-container matColumnDef="action">
+      <mat-header-cell *matHeaderCellDef>Cancel</mat-header-cell>
+      <mat-cell *matCellDef="let order">
+        <button mat-icon-button color="warn" (click)="cancelOrder(order.id)">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+  
+    <!-- Define table header -->
+    <mat-header-row *matHeaderRowDef="['image', 'id', 'totalPrice', 'status', 'action']"></mat-header-row>
+  
+    <!-- Define table rows -->
+    <mat-row *matRowDef="let order; columns: ['image', 'id', 'totalPrice', 'status', 'action']"></mat-row>
+  </mat-table>
+  

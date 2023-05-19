@@ -3,18 +3,36 @@
     <p class="message-p">{{orderMsg}}</p>
     <div class="row">
         <div class="col-sm-7 form-details">
-            <h3>Fill Your Shipping Details</h3>
+            <h3>Enter Your Delivery Information </h3>
             <form #orderData="ngForm" class="common-form" (ngSubmit)="orderNow(orderData.value)">
-                <input type="text" name="name" placeholder="Enter your name" class="form-input" ngModel>
-                <input type="text" name="email" placeholder="Enter your email" class="form-input" ngModel>
-                <input type="text" name="phone" placeholder="Enter phone number" class="form-input" ngModel>
-                <input type="text" name="adress" placeholder="Enter your address" class="form-input" ngModel>
-                <button class="form-button">Order Now</button>
+                <div class="form-outline mb-4">
+
+                <input type="text" name="name" placeholder="Enter your name" class="form-control" ngModel>
+                </div>
+                <div class="form-outline mb-4">
+
+                <input type="text" name="email" placeholder="Enter your email" class="form-control" ngModel>
+                </div>
+                <div class="form-outline mb-4">
+
+                <input type="text" name="phone" placeholder="Enter phone number" class="form-control" ngModel>
+                </div>
+                <div class="form-outline mb-4">
+
+                <input type="text" name="adress" placeholder="Enter your address" class="form-control" ngModel>
+                </div >
+                <div class="form-outline mb-4">
+
+                <button class="form-button"
+                class="btn btn-primary btn-lg"
+                style="padding-left: 2.5rem; padding-right: 2.5rem"
+             >Order Now</button>
+            </div>
             </form>
         </div>
-        <div class="col-sm-5">
-            <h3>Total Amount: <b>{{totalPrice | currency:'INR'}}</b> </h3>
-            <h3>Payment Methods: <b>Cash on delivery available</b></h3>
-        </div>
+        <div class="col-sm-5 total-amount">
+            <h3>Total : <b>{{totalPrice | currency:'TND'}}</b></h3>
+          </div>
+          
     </div>
 </div>

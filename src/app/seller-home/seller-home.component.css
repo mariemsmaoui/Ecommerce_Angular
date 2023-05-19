@@ -1,26 +1,81 @@
 .productList{
     text-align: center;
-    color: blue;
     margin-top: 30px;
     margin-bottom: 50px;
 }
 
 table{
     text-align: left;
-    color: black;
     border-collapse: collapse;
     margin: auto;
-    
+    max-width: 80%;
+    table-layout: fixed;
 }
+
 table td, table th{
-    border: 1px solid blue;
+   
     padding: 10px;
     min-height: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  
+  
 }
+th{
+    color:  #0066cc;
+    font-size: 17px;
+    font-weight: bold;
+font-family: Arial, Helvetica, sans-serif;}
+
 img{
     width: 100px;
     height: 100px;
 }
+
 .adjust{
     margin-left: 10px;
 }
+
+.scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.scroll-top-btn:hover {
+    background-color: #4CAF50;
+}
+
+@media only screen and (max-width: 768px) {
+  table td, table th{
+    padding: 5px;
+    min-height: 60px;
+  }
+}
+.icon-delete {
+    color: red;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color:  #0066cc;
+    text-shadow: 1px 1px #ccc;
+    margin-bottom: 29px;
+    margin-top :30px;
+  }
+  .btn {
+    padding-left: 1.5rem; padding-right: 1.5rem;
+    margin:20px;
+  }

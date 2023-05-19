@@ -26,3 +26,49 @@
     border-bottom: 1px solid #ddd;
     padding-bottom: 10px;
 }
+.my-orders{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.my-orders div{
+    text-align: center;
+}
+
+.my-orders .row-data{
+    margin-bottom: 20px;
+    font-size: large;
+    font-weight: 600
+}
+.my-orders h2{
+    text-align: center;
+    color: blue;
+}
+/* Style the button */
+
+  /* Apply hover effect */
+  .form-button:hover {
+    background-color: #306bbf; /* Change the background color on hover */
+  }
+  
+
+.my-orders img{
+    width: 100px;
+}
+
+.order-data{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #4b4444;
+    padding-bottom: 10px;
+}
+.form-button{
+    background-color: #505660; /* Set the background color */
+    color: #fff; /* Set the text color */
+    padding: 5px 5px; /* Add padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Add a cursor on hover */
+  }
+  mat-header-cell {
+    font-weight: bold;
+    color: #306bbf;
+  }

@@ -1,12 +1,29 @@
 .checkout h2{
     text-align: center;
-    color: blue;
+    color: rgb(0, 157, 255);
     margin-top: 30px;
     margin-bottom: 50px;
 }
 
 .form-details h3{
     text-align: center;
-    color: blue;
+    color: rgb(0, 157, 255);
     margin-bottom: 20px;
 }
+.total-amount {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .total-amount h3 {
+    margin-bottom: 5px;
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
+    color: royalblue;
+  }
+  
+  .total-amount b {
+    color: #ff0000;
+  }
+  

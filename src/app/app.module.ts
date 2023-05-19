@@ -29,7 +29,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SellerDashboardComponent } from './dashboard/components/seller-dashboard/seller-dashboard.component';
+import { NgChartsModule } from 'ng2-charts';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +53,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     UserAuthComponent,
     CartPageComponent,
     CheckoutComponent,
-    MyOrdersComponent
+    MyOrdersComponent,
+
+   
   ],
   imports: [
     BrowserModule,
@@ -61,8 +71,15 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
-    MatToolbarModule
-
+    MatToolbarModule,
+    MatTableModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+    NgChartsModule,
+    DashboardModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
 
 
   ],

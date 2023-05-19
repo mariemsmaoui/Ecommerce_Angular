@@ -2,13 +2,13 @@
     text-align: center;
     margin-bottom: 50px;
     margin-top: 80px;
-    color: blue;
+    color: rgb(0, 119, 255);
 }
 
 .signup h2, .login h2{
     margin-top: 50px;
     margin-bottom: 50px;
-    color: blue;
+    color: rgb(0, 119, 255);
 }
 .divider:after,
 .divider:before {

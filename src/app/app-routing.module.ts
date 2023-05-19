@@ -19,6 +19,16 @@ const routes: Routes = [
     component:HomeComponent,
     title: "Home"
   },
+
+  {
+    path:"details/:productID",
+    component:ProductDetailsComponent
+  },
+
+  {
+    path:"user-auth",
+    component:UserAuthComponent
+  },
   {
     path:"seller-auth",
     component:SellerAuthComponent,
@@ -46,14 +56,8 @@ const routes: Routes = [
     path:"search/:query",
     component:SearchComponent
   },
-  {
-    path:"details/:productID",
-    component:ProductDetailsComponent
-  },
-  {
-    path:"user-auth",
-    component:UserAuthComponent
-  },
+ 
+
   {
     path:"cart-page",
     component:CartPageComponent,
@@ -68,7 +72,13 @@ const routes: Routes = [
     path:"my-orders",
     component:MyOrdersComponent,
     title:"My Orders"
-  }
+  },
+  {
+    path: 'seller-dashboard',
+    loadChildren:() => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+    title: "Dashboard",
+    canActivate: [AuthGuard]
+   },
 ];
 
 @NgModule({

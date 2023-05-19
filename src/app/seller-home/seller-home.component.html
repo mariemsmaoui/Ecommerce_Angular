@@ -1,32 +1,49 @@
-<div class="productList">
+<div class="mat-elevation-z8" *ngIf="productList">
+
     <h2>All Product List</h2>
     <h4 class="message-p">{{productMessage}}</h4>
-    <table>
-        <thead>
-            <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Color</th>
-                <th>Category</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr *ngFor="let product of productList">
-                <td><img src="{{product.image}}" alt="{{product.name}}"></td>
-                <td>{{product.name}}</td>
-                <td>{{product.price}}</td>
-                <td>{{product.color}}</td>
-                <td>{{product.category}}</td>
-                <td>{{product.description}}</td>
-                <td>
-                    <fa-icon (click)="deleteProduct(product.id)" ></fa-icon>
-                    <a routerLink="/seller-update-product/{{product.id}}"></a>
-                </td>
-            </tr>
-        </tbody>
+    <button (click)="addProduct()"
+    class="btn btn-primary btn"
+  >Add Product</button>
+    <table mat-table [dataSource]="productList">
+      <ng-container matColumnDef="image">
+        <th mat-header-cell *matHeaderCellDef>Image</th>
+        <td mat-cell *matCellDef="let product"><img src="{{product.image}}" alt="{{product.name}}"></td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>Name</th>
+        <td mat-cell *matCellDef="let product">{{product.name}}</td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>Price</th>
+        <td mat-cell *matCellDef="let product">{{product.price}}</td>
+      </ng-container>
+      <ng-container matColumnDef="color">
+        <th mat-header-cell *matHeaderCellDef>Color</th>
+        <td mat-cell *matCellDef="let product">{{product.color}}</td>
+      </ng-container>
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>Category</th>
+        <td mat-cell *matCellDef="let product">{{product.category}}</td>
+      </ng-container>
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Description</th>
+        <td mat-cell *matCellDef="let product">{{product.description}}</td>
+      </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>Action</th>
+        <td mat-cell *matCellDef="let product">
+          <mat-icon class="icon-delete" (click)="deleteProduct(product.id)">restore_from_trash</mat-icon>
+          <a routerLink="/seller-update-product/{{product.id}}"><mat-icon class="adjust">edit</mat-icon></a>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="['image', 'name', 'price', 'color', 'category', 'description', 'action']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['image', 'name', 'price', 'color', 'category', 'description', 'action'];"></tr>
     </table>
-</div>
+    
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+  showFirstLastButtons
+  aria-label="Select page of periodic elements">
+</mat-paginator>
+  </div>
+  

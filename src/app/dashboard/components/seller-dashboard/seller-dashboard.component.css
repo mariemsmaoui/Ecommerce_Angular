@@ -1,0 +1,74 @@
+.chart-wrapper canvas {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .chart-wrapper .bar-chart canvas {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .chart-wrapper .pie-chart canvas {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+  
+  /* Add animation classes */
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .animate-bar-chart {
+    animation: animateBarChart 2s ease-out;
+  }
+  
+  .animate-pie-chart {
+    animation: animatePieChart 2s ease-out;
+  }
+  
+  /* Define custom animations */
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes animateBarChart {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    
+  }
+  @keyframes animatePieChart {
+    0% { transform: rotate(-90deg) scale(0.5); opacity: 0; }
+    100% { transform: rotate(0) scale(1); opacity: 1; }
+}
+
+/* Assurez-vous que les graphiques sont toujours visibles après l'animation */
+.chart-wrapper canvas.chartjs-render-monitor {
+    opacity: 1;
+    transform: translateY(0);
+}
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chart-wrapper {
+  width: 48%; /* Adjust the width as per your preference */
+}
+
+  
+
+  
+  
